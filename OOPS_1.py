@@ -112,13 +112,11 @@
 
 
 # class Test:
-
 #     def __init__(self):
 #         print("Contructor Execution...")
-
 #     def m1(self):
 #         print("Method Execution...")
-
+# 
 # t1 = Test()
 # t2 = Test()
 # t1.m1()
@@ -130,38 +128,34 @@
 
 
 # class Student:
-
 #     '''This is student class with required data'''
-    
 #     def __init__(self,x,y,z):
 #         self.name = x
 #         self.rollno = y
 #         self.marks = z
-
 #     def display(self):
 #         print("Student Name: {}\nRoll No: {}\nMarks: {}".format(self.name, self.rollno, self.marks)) 
-
+# 
 # s1 = Student("Durga", 101, 180)
 # s1.display() 
 
 
 
 
-# *** 1. Instance Variables :
+#  *** 1. INSTANCE VARIABLES:
 # --> We can declare instance variables by inside :
 # (a) Inside constructor by using "self variable".
 # (b) Inside instance method by using "Self Variable" 
 # (c) Outside of Class by using Object Reference Variables.
 
 
-# class Test:
 
+# class Test:
 #     def __init__(self):
 #         self.a = 20          # (a) Inside constructor by using "self variable"
-
 #     def m1(self):
 #         self.b = 30          # (b) Inside instance method by using "Self Variable"
-    
+# 
 # t = Test()
 # t.m1()
 # t.c=40                      # (c) Outside of Class by using Object Reference Variables.
@@ -169,18 +163,16 @@
 
 
 
+
 # *** How to access Instance Variables:
 
 # class Test:
-
 #     def __init__(self):
 #         self.a=10
 #         self.b=20
-    
 #     def display(self):
 #         print(self.a)
 #         print(self.b)
-
 # t=Test()
 # t.display()
 # print(t.a, t.b)
@@ -190,22 +182,18 @@
 
 # *** How to delete Instance Variable from the Object:
 
-
 # class Test:
-
 #     def __init__(self):
 #         self.a=10
 #         self.b=20
-#         self.c=30
-    
+#         self.c=30    
 #     def display(self):
 #         print(self.a)
 #         print(self.b)
 #         print(self.c)
-
+# 
 # t1=Test()
 # t2=Test()
-
 # del t1.c
 # print(t1.__dict__)
 # print(t2.__dict__)
@@ -213,23 +201,19 @@
 
 
 
-
 # *** Changing Values of instance Variables:
 
 # class Test:
-
 #     def __init__(self):
 #         self.a=10
 #         self.b=20
 #         self.c=30
-    
+# 
 # t1=Test()
 # t2=Test()
-
 # t1.a=15
 # t1.b=25
 # t1.c=35
-
 # print("t1: ", t1.a, t1.b, t1.c)
 # print("t2: ", t2.a, t2.b, t2.c)
 
@@ -237,7 +221,7 @@
 
 
 
-# ***  ---------------------------   (2).  STATIC VARIABLES     ------------------------------------
+# ***  ---------------------------  (2)  STATIC VARIABLES    ------------------------------------
 
 # --> Static variables doesn't varies from object to object.
 # --> Static variables are declared directly in the class but outside of the methods.
@@ -248,24 +232,22 @@
 
 # class Test:
 #     x=10
-    
 #     def __init__(self):
 #         self.y=20
-
+# 
 # t1=Test()
 # t2=Test()
-
 # print("t1: ", t1.x, t1.y)
 # print("t2: ", t2.x, t2.y)
-
 # Test.x=15
-
 # print("t1: ", t1.x, t1.y)
 # print("t2: ", t2.x, t2.y)
+
 
 
 
 # *** Various Places to declare static variables:
+
 # --> within the class but from outside the mehod.
 # --> inside "constructor" by using class name.
 # --> inside "instance method" by using class name or cls variable.
@@ -274,22 +256,18 @@
 
 # class Test:
 #     # a=10                                 # inside class but outside methods
-
 #     def __init__(self):                    # Constructor
 #         Test.b=20
-    
 #     def m1(self):                          # Instace Method
 #         Test.c=30
-    
 #     @classmethod                           # We need to mention class method.
 #     def m2(x):                             # Class Medthod, x is cls variable.
 #         x.d1=40
 #         Test.d2=400
-    
 #     @staticmethod                          # We need to mention static method.
 #     def m3():                              # Static Medthod
 #         Test.e=50
-    
+#     
 # print(Test.a)
 # t=Test()
 # print(Test.b)
